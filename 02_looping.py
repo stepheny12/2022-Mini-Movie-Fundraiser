@@ -1,4 +1,4 @@
-# main rountine starts here
+# main routine starts here
 
 # set maximum number of tickets below
 MAX_TICKETS = 3
