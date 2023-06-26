@@ -3,7 +3,6 @@
 
 # Check user has entered yes / no to a question
 def yes_no(question):
-
     while True:
         response = input(question).lower()
 
@@ -15,6 +14,16 @@ def yes_no(question):
         else:
             print("Please enter yes or no")
 
+
+# checks that the user response is not blank
+def not_blank(question):
+    while True:
+        response = input(question)
+
+        if response == "":
+            print("Sorry this can't be blank. Please try again")
+        else:
+            return response
 
 
 # main routine starts here
@@ -33,9 +42,9 @@ print()
 
 # loop to sell tickets
 while tickets_sold < MAX_TICKETS:
-    name = input("Please enter your name or 'xxx' to quit: ")
+    name = not_blank("Enter your name (or 'xxx' to quit) ")
 
-    if name == 'xxx' :
+    if name == 'xxx':
         break
 
     tickets_sold += 1
